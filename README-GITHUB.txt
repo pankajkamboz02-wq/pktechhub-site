@@ -1,15 +1,21 @@
-PK Tech Hub — GitHub CMS Ready
+# PK Tech Hub — GitHub + Netlify + Decap CMS (Ready)
+Live in one go. Upload these files to the repo root and connect Netlify.
 
-Repo:
-- GitHub: https://github.com/pankajkamboz02-wq/pktechhub-site (create this as PUBLIC)
+## Quick steps
+1) Create repo `pktechhub-site` under `pankajkamboz02-wq` (public).
+2) Upload all files in this ZIP **to the repo root** (not the ZIP itself).
+3) Netlify → Import from Git → select `pktechhub-site`.
+   - Branch: `main`
+   - Build command: *(blank)*
+   - Publish directory: `.`
+4) Open site URL → `/admin` → Login with GitHub.
+5) Create some Products/Offers/Gallery and publish.
 
-Steps:
-1) Create repo pktechhub-site under pankajkamboz02-wq. Make it Public.
-2) Put these files in repo root; commit & push to main.
-3) Netlify → Add new site → Import from Git → choose the repo → deploy.
-4) Open /admin → Login with GitHub → authorize → start editing.
+## Auto-render (already included)
+- GitHub Action builds `/static/data/*.json` from `/content/**/*.md` on each push.
+- Frontend script in `index.html` auto-renders Products/Offers/Gallery from JSON.
 
-Config pre-set:
-- backend.github repo: pankajkamboz02-wq/pktechhub-site
-- branch: main
-- OAuth: https://decapcms-oauth.netlify.app (public repos only)
+## Customize
+- Replace map embed in `index.html` with your exact location.
+- Upload a `favicon.png` to `/static/uploads/` (already referenced).
+- Style tweaks in the `<style>` block.
