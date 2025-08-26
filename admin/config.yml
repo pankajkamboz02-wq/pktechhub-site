@@ -6,41 +6,40 @@ backend:
   auth_endpoint: auth
 
 media_folder: "static/uploads"
-public_folder: "/uploads"
+public_folder: "/static/uploads"
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "products"
     label: "Products"
     folder: "content/products"
     create: true
-    format: "json"
     slug: "{{slug}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Price (₹)", name: "price", widget: "number", min: 0, step: 1, required: false}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Price", name: "price", widget: "string", required: false}
+      - {label: "Category", name: "category", widget: "string", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "offers"
     label: "Offers"
     folder: "content/offers"
     create: true
-    format: "json"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Details", name: "details", widget: "text"}
       - {label: "Valid Till", name: "valid_till", widget: "datetime", required: false}
-      - {label: "Banner", name: "image", widget: "image", required: false}
+      - {label: "Banner", name: "banner", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "gallery"
     label: "Gallery"
     folder: "content/gallery"
     create: true
-    format: "json"
     slug: "{{slug}}"
     fields:
-      - {label: "Caption", name: "caption", widget: "string", required: false}
+      - {label: "Caption", name: "title", widget: "string", required: false}
       - {label: "Photo", name: "image", widget: "image"}
-      - {label: "Category", name: "category", widget: "select", options: ["CCTV","Repair","Mobile","Laptop","Other"], required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
