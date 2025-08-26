@@ -26,12 +26,12 @@
     .btn.brand{background:var(--brand);border:none;color:#000;font-weight:700}
     .btn.ghost{background:transparent}
     .hero{position:relative;text-align:center;color:#fff}
-    .hero img{width:100%;height:auto;max-height:500px;object-fit:cover}
+    .hero img{width:100%;height:auto;max-height:520px;object-fit:cover}
     .section{max-width:1150px;margin:auto;padding:40px 24px;border-top:1px solid var(--border)}
     .title{font-size:26px;margin-bottom:16px;color:var(--brand)}
     .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
     .card{border:1px solid var(--border);border-radius:14px;background:var(--card);overflow:hidden}
-    .card img{width:100%;height:160px;object-fit:cover}
+    .card img{width:100%;height:200px;object-fit:cover}
     .pad{padding:14px}
     .price{font-weight:700;color:var(--brand)}
     footer{border-top:1px solid var(--border);padding:20px;text-align:center;color:var(--muted)}
@@ -42,11 +42,7 @@
     .fab i{width:26px;height:26px}
     .pulse{position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(212,175,55,.45);
            animation:pulse 2.2s infinite;}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(212,175,55,.45)}
-      70%{box-shadow:0 0 0 18px rgba(212,175,55,0)}
-      100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}
-    }
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.45)}70%{box-shadow:0 0 0 18px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
   </style>
 </head>
 <body>
@@ -68,9 +64,7 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="/static/uploads/hero.jpg" alt="PK Tech Hub Banner" />
-  </section>
+  <section class="hero"><img src="/static/uploads/hero.jpg" alt="PK Tech Hub Banner" /></section>
 
   <section id="products" class="section">
     <h2 class="title">Products</h2>
@@ -87,9 +81,9 @@
   <section id="services" class="section">
     <h2 class="title">Services</h2>
     <div class="grid">
-      <div class="card"><div class="pad"><h3>Computer & Laptop Repair</h3><p class="muted">Upgrades, OS install, fixes.</p></div></div>
-      <div class="card"><div class="pad"><h3>Mobile & iPhone Repair</h3><p class="muted">Screens, batteries, board fixes.</p></div></div>
-      <div class="card"><div class="pad"><h3>CCTV Setup</h3><p class="muted">Install & remote config.</p></div></div>
+      <div class="card"><div class="pad"><h3>CCTV Sales & Installation</h3><p class="muted">Home/Office packages with DVR/NVR, remote view setup.</p></div></div>
+      <div class="card"><div class="pad"><h3>Laptop & Computer Repair</h3><p class="muted">OS install, SSD/RAM upgrades, data backup, cleanup.</p></div></div>
+      <div class="card"><div class="pad"><h3>Mobile & iPhone Repair</h3><p class="muted">Screens, batteries, board-level fixes (selected).</p></div></div>
     </div>
   </section>
   <section id="contact" class="section">
@@ -101,15 +95,29 @@
 
   <footer>© <span id="yr"></span> PK Tech Hub — Stylish Gold Theme</footer>
 
-  <!-- Floating WhatsApp Bubble -->
   <a class="fab" href="https://wa.me/916280892011?text=Hi%20PK%20Tech%20Hub" target="_blank" aria-label="Chat on WhatsApp">
     <span class="pulse"></span>
     <i data-lucide="message-circle"></i>
   </a>
 
-  <script>
+  <script type="module">
     document.getElementById("yr").textContent=new Date().getFullYear();
-    window.addEventListener('DOMContentLoaded',()=>{ if(window.lucide){ lucide.createIcons(); } });
+    if(window.lucide){ lucide.createIcons(); }
+    async function loadJSON(u){ try{const r=await fetch(u,{cache:'no-store'}); if(!r.ok) return []; return r.json();}catch{ return []; } }
+    function h(t,a={},...c){ const e=Object.assign(document.createElement(t),a); for(const x of c){ if(typeof x==='string') e.appendChild(document.createTextNode(x)); else if(x) e.appendChild(x);} return e; }
+    function card(p){ const img=p.image?h('img',{src:p.image,alt:p.title||'Item'}):null; const price=p.price?h('div',{className:'price'},'₹ '+p.price):null; const cat=p.category?h('div',{className:'muted'},p.category):null; return h('div',{className:'card'}, img, h('div',{className:'pad'}, h('h3',{},p.title||'Item'), price, cat, p.body?h('p',{className:'muted'},p.body):null)); }
+    function offer(o){ const img=o.banner?h('img',{src:o.banner,alt:o.title||'Offer'}):null; const vt=o.valid_till?new Date(o.valid_till).toLocaleDateString():''; return h('div',{className:'card'}, img, h('div',{className:'pad'}, h('h4',{},o.title||'Offer'), vt?h('div',{className:'muted'},'Valid till: '+vt):null, o.body?h('p',{className:'muted'},o.body):null)); }
+    function tile(g){ return h('figure',{className:'card'}, h('img',{src:g.image,alt:g.title||'Photo'}), h('div',{className:'pad'}, g.title?h('figcaption',{},g.title):null)); }
+    (async ()=>{
+      const [products, offers, gallery] = await Promise.all([
+        loadJSON('/static/data/products.json'),
+        loadJSON('/static/data/offers.json'),
+        loadJSON('/static/data/gallery.json'),
+      ]);
+      const pl=document.querySelector('#products-list'); products.forEach(p=>pl.appendChild(card(p)));
+      const ol=document.querySelector('#offers-list'); offers.forEach(o=>ol.appendChild(offer(o)));
+      const gg=document.querySelector('#gallery-grid'); gallery.forEach(g=>gg.appendChild(tile(g)));
+    })();
   </script>
 </body>
 </html>

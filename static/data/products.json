@@ -1,0 +1,65 @@
+[
+  {
+    "title": "AHD Color Bullet Camera (1080P)",
+    "price": "1499",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam1.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "MeccLien PRO: Bullet & Dome Twin Pack",
+    "price": "3699",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam2.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "HD Intelligent Network Camera (PTZ)",
+    "price": "2899",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam3.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "Smart PTZ with Screen Dock",
+    "price": "5999",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam4.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "Display Shelf \u2014 PTZ Lineup",
+    "price": null,
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam5.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "CP PLUS ezyKam+ Wi\u2011Fi Bullet",
+    "price": "4499",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam6.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "Smart PTZ Outdoor (Dual Lens)",
+    "price": "3299",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam7.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "Bulb Camera Wi\u2011Fi 360\u00b0",
+    "price": "1999",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam8.jpg",
+    "body": "In-stock with install & remote view setup."
+  },
+  {
+    "title": "HD Intelligent PTZ (Boxed)",
+    "price": "2799",
+    "category": "CCTV & Security",
+    "image": "/static/uploads/cam9.jpg",
+    "body": "In-stock with install & remote view setup."
+  }
+]
