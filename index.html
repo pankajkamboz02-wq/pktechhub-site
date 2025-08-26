@@ -1,209 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PK Tech Hub — Computers • Mobiles • Laptops • CCTV</title>
-  <meta name="description" content="PK Computer | Tech Hub — Repair & Sales for Computers, Mobiles, iPhones, Laptops, and CCTV Solutions in Ferozpur.">
-  <link rel="icon" href="/static/uploads/favicon.png">
+  <meta name="description" content="PK Computer | Tech Hub — Repair & Sales for Computers, Mobiles, iPhones, Laptops, and CCTV Solutions in Ferozpur." />
+  <link rel="icon" href="/static/uploads/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/lucide@latest"></script>
   <style>
-    :root{--bg:#000;--fg:#fff;--muted:#bdbdbd;--card:#0a0a0a;--border:#222;}
-    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
-    a{color:var(--fg);text-decoration:none} a:hover{opacity:.8}
-    .wrap{max-width:1100px;margin:auto;padding:24px}
-    header{position:sticky;top:0;background:rgba(0,0,0,.8);backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid var(--border);z-index:10}
-    nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
-    .logo{font-weight:800;letter-spacing:.5px}
-    ul.menu{list-style:none;display:flex;gap:12px;margin:0;padding:0;flex-wrap:wrap}
-    .btn{border:1px solid var(--border);padding:10px 14px;border-radius:999px;background:#0b0b0b}
-    .hero{display:grid;gap:16px;grid-template-columns:1.2fr .8fr;align-items:center;padding:40px 0;border-bottom:1px solid var(--border)}
-    .hero h1{font-size:40px;margin:0 0 6px}
+    :root{
+      --bg:#0a0a0a; --fg:#ffffff; --muted:#bdbdbd; --card:#111; --border:#2a2a2a;
+      --brand:#d4af37; /* gold */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;background:rgba(10,10,10,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:100}
+    nav{max-width:1150px;margin:auto;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:44px}
+    .logo-text{font-weight:800;font-size:20px}
+    ul.menu{display:flex;gap:12px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+    .btn{padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:var(--card);display:inline-flex;align-items:center;gap:6px}
+    .btn.brand{background:var(--brand);border:none;color:#000;font-weight:700}
+    .btn.ghost{background:transparent}
+    .hero{max-width:1150px;margin:auto;padding:60px 24px;display:grid;gap:24px;grid-template-columns:1.1fr .9fr;align-items:center}
+    .hero h1{font-size:42px;margin:0}
     .muted{color:var(--muted)}
+    .pills{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px}
+    .pill{padding:8px 12px;border-radius:999px;background:#1a1a1a;border:1px solid var(--border)}
+    .section{max-width:1150px;margin:auto;padding:40px 24px;border-top:1px solid var(--border)}
+    .title{font-size:26px;margin-bottom:16px;color:var(--brand)}
     .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{border:1px solid var(--border);border-radius:16px;background:var(--card);overflow:hidden}
-    .card .pad{padding:14px}
-    .card img{width:100%;height:180px;object-fit:cover;display:block}
-    h2{margin:28px 0 12px;font-size:26px}
-    .kpi{display:flex;gap:12px;flex-wrap:wrap}
-    .kpi .pill{border:1px solid var(--border);padding:8px 12px;border-radius:999px;background:#0b0b0b}
-    .section{padding:28px 0;border-bottom:1px solid var(--border)}
-    footer{padding:28px 0;color:var(--muted)}
-    .two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
-    input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:#0a0a0a;color:var(--fg)}
-    .ghost{border:1px dashed var(--border);padding:28px;border-radius:16px;color:var(--muted)}
-    figure{margin:0}
-    figcaption{font-size:12px;color:var(--muted);margin-top:6px}
-    .badge{font-size:12px;color:#fff;opacity:.9}
-    .map{border:0;width:100%;height:280px;border-radius:16px}
-    .qr{width:140px;height:140px;background:#111;border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center}
-    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+    .card{border:1px solid var(--border);border-radius:14px;background:var(--card);overflow:hidden;transform:translateY(8px);opacity:0;transition:.6s}
+    .card.reveal{opacity:1;transform:none}
+    .card img{width:100%;height:160px;object-fit:cover}
+    .pad{padding:14px}
+    .price{font-weight:700;color:var(--brand)}
+    footer{border-top:1px solid var(--border);padding:20px;text-align:center;color:var(--muted)}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <nav>
-        <div class="row">
-          <div class="logo">PK Tech Hub</div>
-          <span class="badge">Computers • Mobiles • Laptops • CCTV</span>
-        </div>
-        <ul class="menu">
-          <li><a href="#products" class="btn">Products</a></li>
-          <li><a href="#offers" class="btn">Offers</a></li>
-          <li><a href="#gallery" class="btn">Gallery</a></li>
-          <li><a href="#contact" class="btn">Contact</a></li>
-          <li><a href="https://wa.me/91PHONE?text=Hi%20PK%20Tech%20Hub" class="btn">WhatsApp</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <div class="brand">
+        <img src="/static/uploads/logo.png" alt="logo" />
+        <span class="logo-text">PK Tech Hub</span>
+      </div>
+      <ul class="menu">
+        <li><a href="#products" class="btn">Products</a></li>
+        <li><a href="#offers" class="btn">Offers</a></li>
+        <li><a href="#gallery" class="btn">Gallery</a></li>
+        <li><a href="#services" class="btn">Services</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+        <li><a href="https://instagram.com/pkcomputer.in" target="_blank" class="btn ghost"><i data-lucide="instagram"></i>Instagram</a></li>
+        <li><a href="https://wa.me/916280892011?text=Hi%20PK%20Tech%20Hub" target="_blank" class="btn brand"><i data-lucide="message-square"></i>WhatsApp</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <h1>All-in-one Tech Hub — Repair & Sales</h1>
-        <p class="muted">Computers, Laptops, Mobiles, iPhones & CCTV Solutions. Fast repair, genuine parts, accessories — serving Ferozpur region.</p>
-        <div class="kpi">
-          <span class="pill">Same‑day fixes*</span>
-          <span class="pill">Pickup & Drop</span>
-          <span class="pill">Warranty on parts</span>
-          <a class="pill" href="https://instagram.com/pkcomputer.in" target="_blank">@pkcomputer.in</a>
-        </div>
+  <section class="hero">
+    <div>
+      <h1>All-in-one Tech Hub — Repair & Sales</h1>
+      <p class="muted">Computers, Laptops, Mobiles, iPhones & CCTV Solutions. Fast repair, genuine parts, accessories — serving Ferozpur region.</p>
+      <div class="pills">
+        <span class="pill">Same-day fixes</span>
+        <span class="pill">Pickup & Drop</span>
+        <span class="pill">Warranty on parts</span>
       </div>
-      <div class="ghost">Add a hero image later (upload in <code>/static/uploads</code> and reference here).</div>
-    </section>
-
-    <section id="products" class="section">
-      <h2>Products</h2>
-      <div id="products-list" class="grid"></div>
-      <p class="muted">Managed via CMS → Products → Publish.</p>
-    </section>
-
-    <section id="offers" class="section">
-      <h2>Offers</h2>
-      <div id="offers-list" class="grid"></div>
-    </section>
-
-    <section id="gallery" class="section">
-      <h2>Gallery</h2>
-      <div id="gallery-grid" class="grid"></div>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Services</h2>
-      <div class="grid">
-        <div class="card"><div class="pad"><h3>Computer & Laptop Repair</h3><p class="muted">OS install, SSD/RAM upgrade, cleanup & maintenance.</p></div></div>
-        <div class="card"><div class="pad"><h3>Mobile & iPhone Repair</h3><p class="muted">Screens, batteries, board‑level fixes (selected models).</p></div></div>
-        <div class="card"><div class="pad"><h3>CCTV Sales & Setup</h3><p class="muted">New installs, DVR/NVR setup, remote viewing.</p></div></div>
-        <div class="card"><div class="pad"><h3>Accessories & Gadgets</h3><p class="muted">Cables, chargers, cases, power banks, keyboards & more.</p></div></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Testimonials</h2>
-      <div class="grid">
-        <div class="card"><div class="pad"><p>“Fixed my laptop the same day. Great pricing.”</p><span class="muted">— Local Customer</span></div></div>
-        <div class="card"><div class="pad"><p>“CCTV install was smooth. Supportive team.”</p><span class="muted">— Shop Owner</span></div></div>
-      </div>
-    </section>
-
-    <section id="faqs" class="section">
-      <h2>FAQs</h2>
-      <div class="grid">
-        <div class="card"><div class="pad"><strong>Do you offer pickup?</strong><p class="muted">Yes, within town limits. Message us on WhatsApp.</p></div></div>
-        <div class="card"><div class="pad"><strong>Warranty?</strong><p class="muted">On parts used — varies by brand/part.</p></div></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section two">
-      <div>
-        <h2>Contact</h2>
-        <p><strong>PK Computer | Tech Hub</strong><br>
-           VPO Pindi, Teh. Guruharshai, Distt. Ferozpur<br>
-           Phone: <a href="tel:PHONE">PHONE</a> • Instagram: <a href="https://instagram.com/pkcomputer.in" target="_blank">@pkcomputer.in</a></p>
-        <div class="row">
-          <a class="btn" href="mailto:hello@example.com">Email</a>
-          <a class="btn" href="https://wa.me/91PHONE?text=Hi%20PK%20Tech%20Hub">WhatsApp</a>
-        </div>
-        <div class="row" style="margin-top:14px;">
-          <div class="qr"><small>QR here</small></div>
-          <small class="muted">Add your WhatsApp QR in <code>/static/uploads</code> and replace the box above with an <code>&lt;img&gt;</code>.</small>
-        </div>
-      </div>
-      <div>
-        <iframe class="map" loading="lazy" allowfullscreen
-          src="https://www.google.com/maps?q=Ferozpur&output=embed"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <div class="row">
-      <span>© <span id="yr"></span> PK Tech Hub</span>
-      <span class="muted">Built on Netlify + Decap CMS</span>
     </div>
-  </footer>
-
-  <script type="module">
-    // dynamic year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    async function loadJSON(url){
-      try{
-        const res = await fetch(url, { cache: 'no-store' });
-        if(!res.ok) return [];
-        return res.json();
-      }catch(e){ return []; }
-    }
-    function h(tag, attrs={}, ...children){
-      const el = Object.assign(document.createElement(tag), attrs);
-      for(const c of children){
-        if(typeof c === 'string') el.appendChild(document.createTextNode(c));
-        else if(c) el.appendChild(c);
-      }
-      return el;
-    }
-    function card({title, price, category, image, body}){
-      const img = image ? h('img', {src: image, alt: title||'Item'}) : null;
-      const priceEl = price ? h('div', {className:'price'}, `₹ ${price}`) : null;
-      const catEl = category ? h('div', {className:'cat muted'}, category) : null;
-      return h('div', {className:'card'}, img, h('div',{className:'pad'},
-        h('h3', {}, title||'Untitled'), priceEl, catEl,
-        body ? h('p', {className:'muted'}, body.slice(0,160)+(body.length>160?'…':'')) : null
-      ));
-    }
-    function offerTile({title, valid_till, banner, body}){
-      const img = banner ? h('img', {src: banner, alt: title||'Offer'}) : null;
-      const vt = valid_till ? new Date(valid_till).toLocaleDateString() : '';
-      return h('div', {className:'card'}, img, h('div',{className:'pad'},
-        h('h4', {}, title||'Offer'),
-        vt ? h('div', {className:'muted'}, `Valid till: ${vt}`) : null,
-        body ? h('p', {className:'muted'}, body) : null
-      ));
-    }
-    function galleryTile({title, image}){
-      return h('figure', {className:'card'}, h('img',{src:image,alt:title||'Gallery'}),
-        h('div',{className:'pad'}, title ? h('figcaption', {}, title) : null));
-    }
-    async function render(){
-      const base = '/static/data';
-      const [products, offers, gallery] = await Promise.all([
-        loadJSON(`${base}/products.json`),
-        loadJSON(`${base}/offers.json`),
-        loadJSON(`${base}/gallery.json`),
-      ]);
-      const pl = document.querySelector('#products-list');
-      if(pl && products.length) products.forEach(p => pl.appendChild(card(p)));
-      const ol = document.querySelector('#offers-list');
-      if(ol && offers.length) offers.forEach(o => ol.appendChild(offerTile(o)));
-      const gg = document.querySelector('#gallery-grid');
-      if(gg && gallery.length) gallery.forEach(g => gg.appendChild(galleryTile(g)));
-    }
-    render();
-
-    // Replace PHONE placeholders
-    document.body.innerHTML = document.body.innerHTML.replaceAll('PHONE', '6280892011');
-  </script>
+    <div style="border:2px dashed var(--brand);border-radius:12px;min-height:200px;display:flex;align-items:center;justify-content:center">Upload hero.jpg later</div>
+  </section>
+  <section id="products" class="section">
+    <h2 class="title">Products</h2>
+    <div id="products-list" class="grid"></div>
+  </section>
+  <section id="offers" class="section">
+    <h2 class="title">Offers</h2>
+    <div id="offers-list" class="grid"></div>
+  </section>
+  <section id="gallery" class="section">
+    <h2 class="title">Gallery</h2>
+    <div id="gallery-grid" class="grid"></div>
+  </section>
+  <section id="services" class="section">
+    <h2 class="title">Services</h2>
+    <div class="grid">
+      <div class="card"><div class="pad"><h3>Computer & Laptop Repair</h3><p class="muted">Upgrades, OS install, fixes.</p></div></div>
+      <div class="card"><div class="pad"><h3>Mobile & iPhone Repair</h3><p class="muted">Screens, batteries, board fixes.</p></div></div>
+      <div class="card"><div class="pad"><h3>CCTV Setup</h3><p class="muted">Install & remote config.</p></div></div>
+    </div>
+  </section>
+  <section id="contact" class="section">
+    <h2 class="title">Contact</h2>
+    <p><b>PK Computer | Tech Hub</b><br>VPO Pindi, Teh. Guruharshai, Distt. Ferozpur<br>Phone: <a href="tel:6280892011">6280892011</a></p>
+    <p><a href="https://instagram.com/pkcomputer.in" target="_blank">Instagram</a> | <a href="https://wa.me/916280892011">WhatsApp</a></p>
+    <iframe class="map" src="https://www.google.com/maps?q=VPO%20Pindi%20Guruharshai%20Ferozpur&output=embed"></iframe>
+  </section>
+  <footer>© <span id="yr"></span> PK Tech Hub — Stylish Gold Theme</footer>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear(); lucide.createIcons();</script>
 </body>
 </html>
