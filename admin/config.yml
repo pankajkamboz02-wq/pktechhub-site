@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: pankajkamboz02-wq/pktechhub-site
+  name: git-gateway
   branch: main
-  base_url: https://decapcms-oauth.netlify.app
-  auth_endpoint: auth
 
 media_folder: "static/uploads"
 public_folder: "/static/uploads"
