@@ -14,7 +14,6 @@
   <header class="nav">
     <div class="container row">
       <div class="logo">
-        <!-- simple inline logo icon -->
         <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M7 17l-4 4m0 0l4-4m-4 4l4-4m10.5-9.5l-6 6 2 2 6-6a1.5 1.5 0 10-2-2z" stroke="#E7C54A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2.5 21.5l6-6" stroke="#E7C54A" stroke-width="2" stroke-linecap="round"/>
@@ -23,6 +22,7 @@
       </div>
 
       <nav class="links">
+        <a href="#services">Services</a>
         <a href="#products">Products</a>
         <a href="#offers">Offers</a>
         <a href="#gallery">Gallery</a>
@@ -37,6 +37,7 @@
     </div>
 
     <div class="mobile-menu">
+      <a href="#services">Services</a>
       <a href="#products">Products</a>
       <a href="#offers">Offers</a>
       <a href="#gallery">Gallery</a>
@@ -54,13 +55,53 @@
         <p>Computers, Laptops, Mobiles, iPhones & CCTV. Fast repair, genuine parts — serving Ferozpur region.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-ghost" href="#products">Browse Products</a>
+          <a class="btn btn-ghost" href="#services">See Services</a>
         </div>
       </div>
       <figure class="hero-art" aria-label="Brand banner">
-        <!-- Replace the image below with your hero: /static/uploads/hero.jpg -->
         <img src="/static/uploads/hero.jpg" alt="PK Tech Hub Banner" />
       </figure>
+    </div>
+  </section>
+
+  <!-- SERVICES (moved up) -->
+  <section id="services" class="container section">
+    <h2>Services</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="content">
+          <h3>Computer / Laptop Repair</h3>
+          <p>Same‑day fixes*, genuine parts, Windows & macOS setup, SSD/RAM upgrade.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>Mobile & iPhone Repair</h3>
+          <p>Screen, battery & board‑level repair. Data safety first.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>CCTV Install & Service</h3>
+          <p>Site survey, wiring, DVR/NVR setup, remote viewing on phone.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>Data Recovery</h3>
+          <p>Hard drives, SSDs, phones & memory cards — best effort recovery.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>Accessories & Gadgets</h3>
+          <p>Keyboards, mice, chargers, cables, webcams & more — sales & support.</p>
+        </div>
+      </article>
+    </div>
+    <div class="cta-row" style="margin-top:16px">
+      <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">Book a Service</a>
+      <a class="btn btn-ghost" href="#products">View Products</a>
     </div>
   </section>
 
@@ -68,7 +109,6 @@
   <section id="products" class="container section">
     <h2>Products</h2>
     <div class="grid">
-      <!-- Duplicate or manage via CMS -->
       <article class="card">
         <div class="media">
           <img src="/static/uploads/product-1.jpg" alt="CP Plus Wi‑Fi Camera" loading="lazy">
@@ -79,7 +119,6 @@
           <p>1080p • Two‑way audio • Night vision</p>
         </div>
       </article>
-
       <article class="card">
         <div class="media">
           <img src="/static/uploads/product-2.jpg" alt="AHD Color Dome Camera" loading="lazy">
@@ -90,7 +129,6 @@
           <p>Full‑color night • Weather‑proof</p>
         </div>
       </article>
-
       <article class="card">
         <div class="media">
           <img src="/static/uploads/product-3.jpg" alt="Smart PTZ Camera" loading="lazy">
@@ -167,7 +205,6 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp -->
   <a href="https://wa.me/916280892011" class="fab-wa" aria-label="WhatsApp" target="_blank" rel="noopener">
     <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
       <path d="M16 3C9.9 3 5 7.9 5 14c0 2.4.8 4.6 2.2 6.4L6 27l6.8-1.8C14 25.8 15 26 16 26c6.1 0 11-4.9 11-11S22.1 3 16 3z" stroke="white" stroke-width="2"/>
