@@ -2,122 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PK Tech Hub — Computers • Mobiles • Laptops • CCTV</title>
-  <meta name="description" content="PK Computer | Tech Hub — Repair & Sales for Computers, Mobiles, iPhones, Laptops, and CCTV Solutions in Ferozpur." />
-  <link rel="icon" href="/static/uploads/logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-  <script type="module" src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    :root{
-      --bg:#0a0a0a; --fg:#ffffff; --muted:#bdbdbd; --card:#111; --border:#2a2a2a;
-      --brand:#d4af37;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--fg);font-family:'Poppins',sans-serif;scroll-behavior:smooth}
-    a{color:inherit;text-decoration:none}
-    header{position:sticky;top:0;background:rgba(10,10,10,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:100}
-    nav{max-width:1150px;margin:auto;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:44px}
-    .logo-text{font-weight:800;font-size:20px}
-    ul.menu{display:flex;gap:12px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-    .btn{padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:var(--card);display:inline-flex;align-items:center;gap:6px}
-    .btn.brand{background:var(--brand);border:none;color:#000;font-weight:700}
-    .btn.ghost{background:transparent}
-    .hero{position:relative;text-align:center;color:#fff}
-    .hero img{width:100%;height:auto;max-height:520px;object-fit:cover}
-    .section{max-width:1150px;margin:auto;padding:40px 24px;border-top:1px solid var(--border)}
-    .title{font-size:26px;margin-bottom:16px;color:var(--brand)}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{border:1px solid var(--border);border-radius:14px;background:var(--card);overflow:hidden}
-    .card img{width:100%;height:200px;object-fit:cover}
-    .pad{padding:14px}
-    .price{font-weight:700;color:var(--brand)}
-    footer{border-top:1px solid var(--border);padding:20px;text-align:center;color:var(--muted)}
-    /* Floating WhatsApp Bubble */
-    .fab{position:fixed;right:18px;bottom:18px;width:62px;height:62px;border-radius:50%;
-         display:flex;align-items:center;justify-content:center;z-index:120;
-         background:var(--brand);color:#000;border:1px solid #000;box-shadow:0 6px 24px rgba(0,0,0,.35);}
-    .fab i{width:26px;height:26px}
-    .pulse{position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(212,175,55,.45);
-           animation:pulse 2.2s infinite;}
-    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.45)}70%{box-shadow:0 0 0 18px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PK Tech Hub — Computers • Mobiles • CCTV</title>
+  <meta name="description" content="PK Tech Hub — Repair & Sales: Computers, Laptops, Mobiles, iPhones & CCTV in Ferozpur. Same‑day fixes, genuine parts, pickup & drop." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="brand">
-        <img src="/static/uploads/logo.png" alt="logo" />
-        <span class="logo-text">PK Tech Hub</span>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container row">
+      <div class="logo">
+        <!-- simple inline logo icon -->
+        <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 17l-4 4m0 0l4-4m-4 4l4-4m10.5-9.5l-6 6 2 2 6-6a1.5 1.5 0 10-2-2z" stroke="#E7C54A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2.5 21.5l6-6" stroke="#E7C54A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <strong>PK Tech Hub</strong>
       </div>
-      <ul class="menu">
-        <li><a href="#products" class="btn">Products</a></li>
-        <li><a href="#offers" class="btn">Offers</a></li>
-        <li><a href="#gallery" class="btn">Gallery</a></li>
-        <li><a href="#services" class="btn">Services</a></li>
-        <li><a href="#contact" class="btn">Contact</a></li>
-        <li><a href="https://instagram.com/pkcomputer.in" target="_blank" class="btn ghost"><i data-lucide="instagram"></i>Instagram</a></li>
-        <li><a href="https://wa.me/916280892011?text=Hi%20PK%20Tech%20Hub" target="_blank" class="btn brand"><i data-lucide="message-square"></i>WhatsApp</a></li>
-      </ul>
-    </nav>
+
+      <nav class="links">
+        <a href="#products">Products</a>
+        <a href="#offers">Offers</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu">
+      <a href="#products">Products</a>
+      <a href="#offers">Offers</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="https://instagram.com/pkcomputer.in" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </header>
 
-  <section class="hero"><img src="/static/uploads/hero.jpg" alt="PK Tech Hub Banner" /></section>
-
-  <section id="products" class="section">
-    <h2 class="title">Products</h2>
-    <div id="products-list" class="grid"></div>
-  </section>
-  <section id="offers" class="section">
-    <h2 class="title">Offers</h2>
-    <div id="offers-list" class="grid"></div>
-  </section>
-  <section id="gallery" class="section">
-    <h2 class="title">Gallery</h2>
-    <div id="gallery-grid" class="grid"></div>
-  </section>
-  <section id="services" class="section">
-    <h2 class="title">Services</h2>
-    <div class="grid">
-      <div class="card"><div class="pad"><h3>CCTV Sales & Installation</h3><p class="muted">Home/Office packages with DVR/NVR, remote view setup.</p></div></div>
-      <div class="card"><div class="pad"><h3>Laptop & Computer Repair</h3><p class="muted">OS install, SSD/RAM upgrades, data backup, cleanup.</p></div></div>
-      <div class="card"><div class="pad"><h3>Mobile & iPhone Repair</h3><p class="muted">Screens, batteries, board-level fixes (selected).</p></div></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container wrap">
+      <div class="hero-copy">
+        <h1>All‑in‑one Tech Hub — Repair & Sales</h1>
+        <p>Computers, Laptops, Mobiles, iPhones & CCTV. Fast repair, genuine parts — serving Ferozpur region.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="#products">Browse Products</a>
+        </div>
+      </div>
+      <figure class="hero-art" aria-label="Brand banner">
+        <!-- Replace the image below with your hero: /static/uploads/hero.jpg -->
+        <img src="/static/uploads/hero.jpg" alt="PK Tech Hub Banner" />
+      </figure>
     </div>
   </section>
-  <section id="contact" class="section">
-    <h2 class="title">Contact</h2>
-    <p><b>PK Computer | Tech Hub</b><br>VPO Pindi, Teh. Guruharshai, Distt. Ferozpur<br>Phone: <a href="tel:6280892011">6280892011</a></p>
-    <p><a href="https://instagram.com/pkcomputer.in" target="_blank">Instagram</a> | <a href="https://wa.me/916280892011">WhatsApp</a></p>
-    <iframe class="map" src="https://www.google.com/maps?q=VPO%20Pindi%20Guruharshai%20Ferozpur&output=embed"></iframe>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="container section">
+    <h2>Products</h2>
+    <div class="grid">
+      <!-- Duplicate or manage via CMS -->
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/product-1.jpg" alt="CP Plus Wi‑Fi Camera" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>CP Plus Wi‑Fi Camera</h3>
+          <p class="price">₹4,990</p>
+          <p>1080p • Two‑way audio • Night vision</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/product-2.jpg" alt="AHD Color Dome Camera" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>AHD Color Dome Camera</h3>
+          <p class="price">₹2,990</p>
+          <p>Full‑color night • Weather‑proof</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/product-3.jpg" alt="Smart PTZ Camera" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>Smart PTZ Camera</h3>
+          <p class="price">₹3,990</p>
+          <p>Pan‑Tilt‑Zoom • App control</p>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <footer>© <span id="yr"></span> PK Tech Hub — Stylish Gold Theme</footer>
+  <!-- OFFERS -->
+  <section id="offers" class="container section">
+    <h2>Offers</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/offer-1.jpg" alt="Festive Combo" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>Festive Combo — CCTV + Install</h3>
+          <p>Free site visit & quick installation. Limited period.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/offer-2.jpg" alt="Repair Discount" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>Phone & Laptop Repair</h3>
+          <p>Up to 20% off on labor charges.</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-  <a class="fab" href="https://wa.me/916280892011?text=Hi%20PK%20Tech%20Hub" target="_blank" aria-label="Chat on WhatsApp">
-    <span class="pulse"></span>
-    <i data-lucide="message-circle"></i>
+  <!-- GALLERY -->
+  <section id="gallery" class="container section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="/static/uploads/gallery-1.jpg" alt="Install 1" loading="lazy">
+      <img src="/static/uploads/gallery-2.jpg" alt="Install 2" loading="lazy">
+      <img src="/static/uploads/gallery-3.jpg" alt="Install 3" loading="lazy">
+      <img src="/static/uploads/gallery-4.jpg" alt="Install 4" loading="lazy">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container section">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>PK Computer | Tech Hub</h3>
+        <p>VPO Pindi, Teh. Guruharshai, Distt. Ferozpur</p>
+        <p><strong>Call:</strong> <a href="tel:+916280892011">+91 62808 92011</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/pkcomputer.in" target="_blank" rel="noopener">@pkcomputer.in</a></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:pankajkamboz02@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="map-card">
+        <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=VPO%20Pindi%20Guruharshai%20Ferozpur&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© PK Tech Hub • Computers • Mobiles • Gadgets • CCTV</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/916280892011" class="fab-wa" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M16 3C9.9 3 5 7.9 5 14c0 2.4.8 4.6 2.2 6.4L6 27l6.8-1.8C14 25.8 15 26 16 26c6.1 0 11-4.9 11-11S22.1 3 16 3z" stroke="white" stroke-width="2"/>
+      <path d="M21.2 19.1c-.3.9-1.8 1.6-2.5 1.6-.6 0-1.3-.2-2.1-.6-1.9-.9-3.3-2.7-3.8-3.3-.5-.6-1.1-1.5-1.1-2.5s.6-1.7.8-1.9c.2-.2.5-.3.7-.3.2 0 .4 0 .5.1.2.3.7 1.7.8 1.9.1.2.1.4 0 .6-.2.3-.3.4-.6.7-.1.1-.3.3-.1.6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.8 1.6.3.1.5.1.7-.1.2-.2 1-.9 1.2-1.2.3-.3.5-.3.7-.2.2.1 1.7.8 1.9.9.2.1.3.1.3.3z" fill="white"/>
+    </svg>
   </a>
 
-  <script type="module">
-    document.getElementById("yr").textContent=new Date().getFullYear();
-    if(window.lucide){ lucide.createIcons(); }
-    async function loadJSON(u){ try{const r=await fetch(u,{cache:'no-store'}); if(!r.ok) return []; return r.json();}catch{ return []; } }
-    function h(t,a={},...c){ const e=Object.assign(document.createElement(t),a); for(const x of c){ if(typeof x==='string') e.appendChild(document.createTextNode(x)); else if(x) e.appendChild(x);} return e; }
-    function card(p){ const img=p.image?h('img',{src:p.image,alt:p.title||'Item'}):null; const price=p.price?h('div',{className:'price'},'₹ '+p.price):null; const cat=p.category?h('div',{className:'muted'},p.category):null; return h('div',{className:'card'}, img, h('div',{className:'pad'}, h('h3',{},p.title||'Item'), price, cat, p.body?h('p',{className:'muted'},p.body):null)); }
-    function offer(o){ const img=o.banner?h('img',{src:o.banner,alt:o.title||'Offer'}):null; const vt=o.valid_till?new Date(o.valid_till).toLocaleDateString():''; return h('div',{className:'card'}, img, h('div',{className:'pad'}, h('h4',{},o.title||'Offer'), vt?h('div',{className:'muted'},'Valid till: '+vt):null, o.body?h('p',{className:'muted'},o.body):null)); }
-    function tile(g){ return h('figure',{className:'card'}, h('img',{src:g.image,alt:g.title||'Photo'}), h('div',{className:'pad'}, g.title?h('figcaption',{},g.title):null)); }
-    (async ()=>{
-      const [products, offers, gallery] = await Promise.all([
-        loadJSON('/static/data/products.json'),
-        loadJSON('/static/data/offers.json'),
-        loadJSON('/static/data/gallery.json'),
-      ]);
-      const pl=document.querySelector('#products-list'); products.forEach(p=>pl.appendChild(card(p)));
-      const ol=document.querySelector('#offers-list'); offers.forEach(o=>ol.appendChild(offer(o)));
-      const gg=document.querySelector('#gallery-grid'); gallery.forEach(g=>gg.appendChild(tile(g)));
-    })();
-  </script>
+  <script src="js/app.js"></script>
 </body>
 </html>
