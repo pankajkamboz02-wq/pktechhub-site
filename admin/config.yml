@@ -1,9 +1,12 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: pankajkamboz02-wq/pktechhub-site
   branch: main
+  base_url: https://decapcms-oauth.netlify.app
+  auth_endpoint: auth
 
-media_folder: "static/uploads"
-public_folder: "/static/uploads"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 publish_mode: editorial_workflow
 
@@ -14,11 +17,10 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Price (₹)", name: "price", widget: "string", required: false}
-      - {label: "Category", name: "category", widget: "string", default: "CCTV & Security", required: false}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Price (₹)", name: "price", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image" }
 
   - name: "offers"
     label: "Offers"
@@ -26,10 +28,10 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Valid Till", name: "valid_till", widget: "datetime", required: false}
-      - {label: "Banner", name: "banner", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Valid Till", name: "valid_till", widget: "datetime", required: false }
+      - { label: "Banner", name: "banner", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "gallery"
     label: "Gallery"
@@ -37,6 +39,5 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Caption", name: "title", widget: "string", required: false}
-      - {label: "Photo", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - { label: "Photo", name: "image", widget: "image" }
