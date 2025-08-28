@@ -1,71 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PK Computer | Your Tech Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="branding">
-      <img src="logo.png" alt="PK Logo" class="logo">
-      <h1>PK Computer <span>| Your Tech Hub</span></h1>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">🛠️</div>
+      <div class="brand-text">
+        <h1>PK Computer</h1>
+        <p>Your Tech Hub</p>
+      </div>
     </div>
-    <nav>
-      <a href="#services">Services</a>
+    <nav class="nav">
       <a href="#products">Products</a>
+      <a href="#services">Services</a>
       <a href="#offers">Offers</a>
-      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="card">PC & Laptop Repair</div>
-    <div class="card">Mobile Repair</div>
-    <div class="card">CCTV Installation</div>
-  </section>
-
-  <section id="products">
-    <h2>Products</h2>
-    <div class="card">CP Plus Wi-Fi Camera - ₹4,990</div>
-    <div class="card">AHD Dome Camera - ₹2,990</div>
-    <div class="card">Smart PTZ Camera - ₹3,990</div>
-  </section>
-
-  <section id="offers">
-    <h2>Special Offers 🎉</h2>
-    <div class="offer-grid">
-      <div class="offer-card">
-        <img src="offer1.jpg" alt="Festive Combo">
-        <h3>Festive Combo - CCTV + Install</h3>
-        <p>Free site visit & installation. Limited period.</p>
-      </div>
-      <div class="offer-card">
-        <img src="offer2.jpg" alt="Repair Discount">
-        <h3>Phone & Laptop Repair</h3>
-        <p>Up to 20% OFF on labor charges.</p>
-      </div>
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>All-in-one Tech Hub — Repair & Sales</h2>
+      <p>Computers, Laptops, Mobiles & CCTV Solutions in Ferozpur.</p>
+      <a class="btn" href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp Us</a>
     </div>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="g1.jpg" alt="Install 1">
-      <img src="g2.jpg" alt="Install 2">
-      <img src="g3.jpg" alt="Install 3">
-      <img src="g4.jpg" alt="Install 4">
-    </div>
-  </section>
+  <main>
+    <section id="products" class="section">
+      <div class="section-head">
+        <h3>Products</h3>
+      </div>
 
-  <footer id="contact">
-    <h2>Contact</h2>
-    <p>Email: pankajkamboz02@gmail.com</p>
-    <p>© 2025 PK Computer | Your Tech Hub</p>
+      <div class="cards">
+        <!-- New item added from user image -->
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/images/mobile-display.webp" alt="Mobile Display Replacement (front and back)">
+          </div>
+          <div class="card-body">
+            <h4>Mobile Display Replacement</h4>
+            <p class="price">₹1,499 – ₹6,999</p>
+            <ul class="bullets">
+              <li>Original quality / OEM grade</li>
+              <li>6–12 month warranty (model-wise)</li>
+              <li>Same‑day fitment for most models</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Example placeholder items -->
+        <article class="card">
+          <div class="card-media placeholder"></div>
+          <div class="card-body">
+            <h4>CP Plus Wi‑Fi Camera</h4>
+            <p class="price">₹4,990</p>
+            <ul class="bullets">
+              <li>1080p</li>
+              <li>Two‑way audio</li>
+              <li>Night vision</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media placeholder"></div>
+          <div class="card-body">
+            <h4>AHD Color Dome Camera</h4>
+            <p class="price">₹2,990</p>
+            <ul class="bullets">
+              <li>Full‑color night</li>
+              <li>Weather‑proof</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head"><h3>Services</h3></div>
+      <div class="chips">
+        <span class="chip">Laptop Repair</span>
+        <span class="chip">Phone Repair</span>
+        <span class="chip">CCTV Install</span>
+        <span class="chip">Data Recovery</span>
+      </div>
+    </section>
+
+    <section id="offers" class="section">
+      <div class="section-head"><h3>Special Offers</h3></div>
+      <div class="offers">
+        <div class="offer">
+          <h4>Festive Combo — CCTV + Install</h4>
+          <p>Free site visit & quick installation. Limited period.</p>
+        </div>
+        <div class="offer">
+          <h4>Phone & Laptop Repair</h4>
+          <p>Up to 20% OFF on labor charges.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head"><h3>Contact</h3></div>
+      <div class="contact">
+        <p><strong>PK Computer</strong>, Ferozpur</p>
+        <p><a href="tel:+919999999999">+91 99999 99999</a> · <a href="mailto:pkcomputer@example.com">pkcomputer@example.com</a></p>
+        <a class="btn" href="https://wa.me/919999999999" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 PK Computer — Your Tech Hub</p>
   </footer>
 </body>
 </html>
