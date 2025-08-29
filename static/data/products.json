@@ -1,5 +1,12 @@
 [
   {
+    "title": "AirCase Protective Laptop Sleeve (Up to 14.1\")",
+    "price": "799",
+    "category": "Accessories",
+    "image": "/static/uploads/aircase-front.jpg",
+    "body": "Water‑resistant neoprene • 4‑Layer protection • Soft inner fleece • Premium zipper • MRP ₹1499 • Online ₹1299 • Our Price ₹799 (GST bill, brand warranty)."
+  },
+  {
     "title": "AHD Color Bullet Camera (1080P)",
     "price": "1499",
     "category": "CCTV & Security",
@@ -28,14 +35,14 @@
     "body": "In-stock with install & remote view setup."
   },
   {
-    "title": "Display Shelf \u2014 PTZ Lineup",
+    "title": "Display Shelf — PTZ Lineup",
     "price": null,
     "category": "CCTV & Security",
     "image": "/static/uploads/cam5.jpg",
     "body": "In-stock with install & remote view setup."
   },
   {
-    "title": "CP PLUS ezyKam+ Wi\u2011Fi Bullet",
+    "title": "CP PLUS ezyKam+ Wi‑Fi Bullet",
     "price": "4499",
     "category": "CCTV & Security",
     "image": "/static/uploads/cam6.jpg",
@@ -49,7 +56,7 @@
     "body": "In-stock with install & remote view setup."
   },
   {
-    "title": "Bulb Camera Wi\u2011Fi 360\u00b0",
+    "title": "Bulb Camera Wi‑Fi 360°",
     "price": "1999",
     "category": "CCTV & Security",
     "image": "/static/uploads/cam8.jpg",

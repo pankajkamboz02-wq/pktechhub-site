@@ -1,126 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PK Computer | Your Tech Hub</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PK Tech Hub — Computers • Mobiles • CCTV</title>
+  <meta name="description" content="PK Tech Hub — Repair & Sales: Computers, Laptops, Mobiles, iPhones & CCTV in Ferozpur. Same‑day fixes, genuine parts, pickup & drop." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">🛠️</div>
-      <div class="brand-text">
-        <h1>PK Computer</h1>
-        <p>Your Tech Hub</p>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container row">
+      <div class="logo">
+        <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 17l-4 4m0 0l4-4m-4 4l4-4m10.5-9.5l-6 6 2 2 6-6a1.5 1.5 0 10-2-2z" stroke="#E7C54A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2.5 21.5l6-6" stroke="#E7C54A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <strong>PK Tech Hub</strong>
       </div>
+
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#offers">Offers</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
-    <nav class="nav">
-      <a href="#products">Products</a>
+
+    <div class="mobile-menu">
       <a href="#services">Services</a>
+      <a href="#products">Products</a>
       <a href="#offers">Offers</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
-    </nav>
+      <a href="https://instagram.com/pkcomputer.in" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <h2>All-in-one Tech Hub — Repair & Sales</h2>
-      <p>Computers, Laptops, Mobiles & CCTV Solutions in Ferozpur.</p>
-      <a class="btn" href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp Us</a>
+    <div class="container wrap">
+      <div class="hero-copy">
+        <h1>All‑in‑one Tech Hub — Repair & Sales</h1>
+        <p>Computers, Laptops, Mobiles, iPhones & CCTV. Fast repair, genuine parts — serving Ferozpur region.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="#services">See Services</a>
+        </div>
+      </div>
+      <figure class="hero-art" aria-label="Brand banner">
+        <img src="/static/uploads/hero.jpg" alt="PK Tech Hub Banner" />
+      </figure>
     </div>
   </section>
 
-  <main>
-    <section id="products" class="section">
-      <div class="section-head">
-        <h3>Products</h3>
-      </div>
+  <!-- SERVICES (moved up) -->
+  <section id="services" class="container section">
+    <h2>Services</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="content">
+          <h3>Computer / Laptop Repair</h3>
+          <p>Same‑day fixes*, genuine parts, Windows & macOS setup, SSD/RAM upgrade.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>Mobile & iPhone Repair</h3>
+          <p>Screen, battery & board‑level repair. Data safety first.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>CCTV Install & Service</h3>
+          <p>Site survey, wiring, DVR/NVR setup, remote viewing on phone.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>Data Recovery</h3>
+          <p>Hard drives, SSDs, phones & memory cards — best effort recovery.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="content">
+          <h3>Accessories & Gadgets</h3>
+          <p>Keyboards, mice, chargers, cables, webcams & more — sales & support.</p>
+        </div>
+      </article>
+    </div>
+    <div class="cta-row" style="margin-top:16px">
+      <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">Book a Service</a>
+      <a class="btn btn-ghost" href="#products">View Products</a>
+    </div>
+  </section>
 
-      <div class="cards">
-        <!-- New item added from user image -->
-        <article class="card">
-          <div class="card-media">
-            <img src="assets/images/mobile-display.webp" alt="Mobile Display Replacement (front and back)">
-          </div>
-          <div class="card-body">
-            <h4>Mobile Display Replacement</h4>
-            <p class="price">₹1,499 – ₹6,999</p>
-            <ul class="bullets">
-              <li>Original quality / OEM grade</li>
-              <li>6–12 month warranty (model-wise)</li>
-              <li>Same‑day fitment for most models</li>
-            </ul>
-          </div>
-        </article>
+  <!-- PRODUCTS -->
+  <section id="products" class="container section">
+    <h2>Products</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/product-1.jpg" alt="CP Plus Wi‑Fi Camera" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>CP Plus Wi‑Fi Camera</h3>
+          <p class="price">₹4,990</p>
+          <p>1080p • Two‑way audio • Night vision</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/product-2.jpg" alt="AHD Color Dome Camera" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>AHD Color Dome Camera</h3>
+          <p class="price">₹2,990</p>
+          <p>Full‑color night • Weather‑proof</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/product-3.jpg" alt="Smart PTZ Camera" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>Smart PTZ Camera</h3>
+          <p class="price">₹3,990</p>
+          <p>Pan‑Tilt‑Zoom • App control</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-        <!-- Example placeholder items -->
-        <article class="card">
-          <div class="card-media placeholder"></div>
-          <div class="card-body">
-            <h4>CP Plus Wi‑Fi Camera</h4>
-            <p class="price">₹4,990</p>
-            <ul class="bullets">
-              <li>1080p</li>
-              <li>Two‑way audio</li>
-              <li>Night vision</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media placeholder"></div>
-          <div class="card-body">
-            <h4>AHD Color Dome Camera</h4>
-            <p class="price">₹2,990</p>
-            <ul class="bullets">
-              <li>Full‑color night</li>
-              <li>Weather‑proof</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="section-head"><h3>Services</h3></div>
-      <div class="chips">
-        <span class="chip">Laptop Repair</span>
-        <span class="chip">Phone Repair</span>
-        <span class="chip">CCTV Install</span>
-        <span class="chip">Data Recovery</span>
-      </div>
-    </section>
-
-    <section id="offers" class="section">
-      <div class="section-head"><h3>Special Offers</h3></div>
-      <div class="offers">
-        <div class="offer">
-          <h4>Festive Combo — CCTV + Install</h4>
+  <!-- OFFERS -->
+  <section id="offers" class="container section">
+    <h2>Offers</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/offer-1.jpg" alt="Festive Combo" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>Festive Combo — CCTV + Install</h3>
           <p>Free site visit & quick installation. Limited period.</p>
         </div>
-        <div class="offer">
-          <h4>Phone & Laptop Repair</h4>
-          <p>Up to 20% OFF on labor charges.</p>
+      </article>
+      <article class="card">
+        <div class="media">
+          <img src="/static/uploads/offer-2.jpg" alt="Repair Discount" loading="lazy">
+        </div>
+        <div class="content">
+          <h3>Phone & Laptop Repair</h3>
+          <p>Up to 20% off on labor charges.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="container section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="/static/uploads/gallery-1.jpg" alt="Install 1" loading="lazy">
+      <img src="/static/uploads/gallery-2.jpg" alt="Install 2" loading="lazy">
+      <img src="/static/uploads/gallery-3.jpg" alt="Install 3" loading="lazy">
+      <img src="/static/uploads/gallery-4.jpg" alt="Install 4" loading="lazy">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container section">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>PK Computer | Tech Hub</h3>
+        <p>VPO Pindi, Teh. Guruharshai, Distt. Ferozpur</p>
+        <p><strong>Call:</strong> <a href="tel:+916280892011">+91 62808 92011</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/pkcomputer.in" target="_blank" rel="noopener">@pkcomputer.in</a></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/916280892011" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:pankajkamboz02@gmail.com">Email</a>
         </div>
       </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="section-head"><h3>Contact</h3></div>
-      <div class="contact">
-        <p><strong>PK Computer</strong>, Ferozpur</p>
-        <p><a href="tel:+919999999999">+91 99999 99999</a> · <a href="mailto:pkcomputer@example.com">pkcomputer@example.com</a></p>
-        <a class="btn" href="https://wa.me/919999999999" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <div class="map-card">
+        <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=VPO%20Pindi%20Guruharshai%20Ferozpur&output=embed"></iframe>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <p>© 2025 PK Computer — Your Tech Hub</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© PK Tech Hub • Computers • Mobiles • Gadgets • CCTV</p>
+    </div>
   </footer>
+
+  <a href="https://wa.me/916280892011" class="fab-wa" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M16 3C9.9 3 5 7.9 5 14c0 2.4.8 4.6 2.2 6.4L6 27l6.8-1.8C14 25.8 15 26 16 26c6.1 0 11-4.9 11-11S22.1 3 16 3z" stroke="white" stroke-width="2"/>
+      <path d="M21.2 19.1c-.3.9-1.8 1.6-2.5 1.6-.6 0-1.3-.2-2.1-.6-1.9-.9-3.3-2.7-3.8-3.3-.5-.6-1.1-1.5-1.1-2.5s.6-1.7.8-1.9c.2-.2.5-.3.7-.3.2 0 .4 0 .5.1.2.3.7 1.7.8 1.9.1.2.1.4 0 .6-.2.3-.3.4-.6.7-.1.1-.3.3-.1.6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.5 2.8 1.6.3.1.5.1.7-.1.2-.2 1-.9 1.2-1.2.3-.3.5-.3.7-.2.2.1 1.7.8 1.9.9.2.1.3.1.3.3z" fill="white"/>
+    </svg>
+  </a>
+
+  <script src="js/app.js"></script>
 </body>
 </html>

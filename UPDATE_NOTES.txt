@@ -1,0 +1,4 @@
+Updates (Auto-generated):
+- Added new product: AirCase Protective Laptop Sleeve (Up to 14.1").
+- Images saved in /static/uploads (aircase-*.jpg).
+- Kept all previous content untouched.
